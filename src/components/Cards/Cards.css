@@ -1,0 +1,8 @@
+.card_actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_content{
+    height: 270px;
+}
