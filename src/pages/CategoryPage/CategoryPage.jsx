@@ -23,7 +23,7 @@ const CategoryPage = () => {
 
         axios.get(`${import.meta.env.VITE_API_URL}`)
             .then(res => { setItems(res.data) });
-    }, [])
+    }, [categoryId])
 
     return (
         <>

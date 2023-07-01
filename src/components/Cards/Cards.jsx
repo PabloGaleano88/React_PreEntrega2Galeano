@@ -12,7 +12,7 @@ const MultiActionAreaCard = ({ item }) => {
     return (
         <Card sx={{ maxWidth: 345, minHeight:470, marginBottom: 2 }}>
             <CardActionArea style={{ height: 'auto' }}>
-                <Link to={`detail/${item.id}`}>
+                <Link to={`/detail/${item.id}`}>
                 <CardMedia
                     component="img"
                     height="150"

@@ -5,7 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Link } from "react-router-dom";
-import "./FilterBar.css"
+import "./FilterBar.css";
 
 const FilterSelect = () => {
     const [items, setItems] = React.useState("");
@@ -15,31 +15,35 @@ const FilterSelect = () => {
     };
 
     return (
-        <Box sx={{ minWidth: 220}}>
+        <Box sx={{ minWidth: 180 }}>
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Filtrar</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={items}
-                    label="Seleccione"
+                    label="Filtrar"
                     onChange={handleChange}
-                >
-                    <div>
-                    <MenuItem value={false}>
-                    <Link to="/" className="MuiTypography-root">Todos</Link>
-                    </MenuItem>
-                    <MenuItem value={false}>
-                        <Link to="/category/false" className="MuiTypography-root">Juegos Pagos</Link>
-                    </MenuItem>
-                    <MenuItem value={true}>
-                        <Link to="/category/true" className="MuiTypography-root">Juegos Free to play</Link>
-                    </MenuItem>
+                ><div>
+                        <Link to="/" className="MuiTypography-root">
+                            <MenuItem value={1}>
+                                Todos
+                            </MenuItem>
+                        </Link>
+                        <Link to="/category/false" className="MuiTypography-root">
+                            <MenuItem value={2}>
+                                Juegos Pagos
+                            </MenuItem>
+                        </Link>
+                        <Link to="/category/true" className="MuiTypography-root">
+                            <MenuItem value={3}>
+                                Juegos Free to play
+                            </MenuItem>
+                        </Link>
                     </div>
                 </Select>
             </FormControl>
         </Box>
     );
-}
+};
 
-export default FilterSelect
+export default FilterSelect;

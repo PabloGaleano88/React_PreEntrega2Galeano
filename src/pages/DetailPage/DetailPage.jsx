@@ -12,10 +12,9 @@ const DetailPage = () => {
 
   useEffect(() => {
 
-
     axios.get(`${import.meta.env.VITE_API_URL}`)
       .then(res => { setItem(res.data) })
-  }, [])
+  }, [id])
 
   function buscarJuego(itemid) {
     return item.find(itemx => itemx.id === itemid);
